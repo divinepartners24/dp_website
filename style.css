@@ -891,8 +891,8 @@ h3 { font-size: clamp(1.2rem, 2.5vw, 1.5rem); font-weight: 500; }
 
 .service-card {
   position: relative;
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(27,134,201,0.2);
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(27,134,201,0.25);
   border-radius: var(--radius-lg);
   padding: 36px 32px;
   transition: var(--transition);
@@ -900,10 +900,10 @@ h3 { font-size: clamp(1.2rem, 2.5vw, 1.5rem); font-weight: 500; }
 }
 
 .service-card:hover {
-  border-color: rgba(72,163,73,0.45);
-  background: rgba(255,255,255,0.07);
+  border-color: rgba(72,163,73,0.55);
+  background: rgba(255,255,255,0.09);
   transform: translateY(-6px);
-  box-shadow: 0 24px 64px rgba(0,0,0,0.3);
+  box-shadow: 0 24px 64px rgba(0,0,0,0.35);
 }
 
 .service-card-glow {
@@ -920,50 +920,58 @@ h3 { font-size: clamp(1.2rem, 2.5vw, 1.5rem); font-weight: 500; }
 
 .service-card:hover .service-card-glow { opacity: 1; }
 
+/* ── Service number — large, bold, clearly visible ── */
 .service-num {
-  font-family: var(--font-serif);
-  font-size: 0.75rem;
-  color: rgba(27,134,201,0.5);
-  letter-spacing: 0.1em;
-  margin-bottom: 20px;
+  font-family: var(--font-numeric);
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--gold-light);
+  letter-spacing: 0.05em;
+  margin-bottom: 16px;
+  line-height: 1;
+  opacity: 0.85;
 }
 
 .service-icon {
   width: 48px;
   height: 48px;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
   transition: var(--transition);
 }
 
 .service-card:hover .service-icon { transform: scale(1.1); }
 
+/* ── Title — bright white, serif ── */
 .service-title {
   font-family: var(--font-serif);
-  font-size: 1.4rem;
+  font-size: 1.45rem;
   font-weight: 500;
-  color: var(--white);
+  color: #FFFFFF;
   margin-bottom: 12px;
 }
 
+/* ── Description — much more readable ── */
 .service-desc {
-  font-size: 0.875rem;
-  color: rgba(255,255,255,0.58);
-  line-height: 1.7;
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.82);
+  line-height: 1.75;
   margin-bottom: 20px;
 }
 
+/* ── Feature list — bright and clear ── */
 .service-features {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 7px;
   margin-bottom: 24px;
 }
 
 .service-features li {
-  font-size: 0.8rem;
-  color: rgba(255,255,255,0.48);
+  font-size: 0.83rem;
+  color: rgba(255,255,255,0.78);
   padding-left: 16px;
   position: relative;
+  line-height: 1.5;
 }
 
 .service-features li::before {
@@ -971,8 +979,9 @@ h3 { font-size: clamp(1.2rem, 2.5vw, 1.5rem); font-weight: 500; }
   position: absolute;
   left: 0;
   color: var(--green);
-  font-size: 1rem;
+  font-size: 1.1rem;
   line-height: 1.2;
+  font-weight: 700;
 }
 
 .service-link {
